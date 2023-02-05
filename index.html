@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatibile" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, intitial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Dashboard Demo</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="title-row">
+          <h1>Demo Dashboard</h1>
+        </div>
+
+        <div class="rectangle-row">
+          <div class="rectangle bitcoin">
+            <div class="action-row">
+              <span class="dot"><img src="./assets/icons/btc.svg" /></span>
+              <div class="button-grp">
+                <button class="buy">Buy</button>
+                <button class="trade">Trade</button>
+              </div>
+            </div>
+            <div class="name-row">
+              <span class="coin-name">Bitcoin</span>
+            </div>
+            <div class="price-row">
+              <span class="coin-price">$22,910.50 </span>
+              <div>
+                <span class="price-change">-0.58%</span>
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="rectangle ethereum">
+            <div class="action-row">
+              <span class="dot">
+                <span class="dot"><img src="./assets/icons/eth.svg" /></span
+              ></span>
+              <div class="button-grp">
+                <button class="buy">Buy</button>
+                <button class="trade">Trade</button>
+              </div>
+            </div>
+            <div class="name-row">
+              <span class="coin-name">Ethereum</span>
+            </div>
+            <div class="price-row">
+              <span class="coin-price">$1649.12 </span>
+              <div>
+                <span class="price-change">-0.58%</span>
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="rectangle dextools">
+            <div class="action-row">
+              <span class="dot"><img src="./assets/icons/sol.svg" /></span>
+              <div class="button-grp">
+                <button class="buy">Buy</button>
+                <button class="trade">Trade</button>
+              </div>
+            </div>
+            <div class="name-row">
+              <span class="coin-name">Solana</span>
+            </div>
+            <div class="price-row">
+              <span class="coin-price">$48,750.00 </span>
+              <div>
+                <span class="price-change">-0.58%</span>
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="rectangle stellar">
+            <div class="action-row">
+              <span class="dot"><img src="./assets/icons/xlm.svg" /></span>
+              <div class="button-grp">
+                <button class="buy">Buy</button>
+                <button class="trade">Trade</button>
+              </div>
+            </div>
+            <div class="name-row">
+              <span class="coin-name">Stellar</span>
+            </div>
+            <div class="price-row">
+              <span class="coin-price">0.093</span>
+              <div>
+                <span class="price-change">-0.08%</span>
+                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section>
+        <div class="row-one">
+          <div class="panel">
+            <span class="graph-name">DAILY BURN</span>
+            <div id="svg-path">
+              <div id="card"></div>
+            </div>
+            <div id="date-row"></div>
+          </div>
+          <div class="panel2">
+            <div class="market-row">
+              <span class="table-name">Market Status</span>
+              <button class="view-btn">View all</button>
+            </div>
+            
+           <div class="market-table">
+            <div class="row">
+              <div class="col-1">
+                <img src="./assets/icons/btc.svg" />
+              </div>
+              <div class="col-2">
+                <div class="header-row">
+                  <span class="total-title">Total Supply</span>
+                  <span class="max-title">Max Supply</span>
+                </div>
+                <div class="total-row total-width">
+                  <span class="total-value">17 M</span>
+                  <span class="max-value">
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                    <span class="max-number">17.5%</span>
+                  </span>
+                </div>
+              </div>
+             
+            </div>
+            <div class="row">
+              <div class="col-1">
+                <img src="./assets/icons/eth.svg" />
+              </div>
+              <div class="col-2">
+                <div class="header-row">
+                  <span class="total-title">Total Supply</span>
+                  <span class="max-title">Max Supply</span>
+                </div>
+                <div class="total-row total-width">
+                  <span class="total-value">17 M</span>
+                  <span class="max-value">
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                    <span class="max-number">17.5%</span>
+                  </span>
+                </div>
+              </div>
+             
+            </div>
+            <div class="row">
+              <div class="col-1">
+                <img src="./assets/icons/sol.svg" />
+              </div>
+              <div class="col-2">
+                <div class="header-row">
+                  <span class="total-title">Total Supply</span>
+                  <span class="max-title">Max Supply</span>
+                </div>
+                <div class="total-row total-width">
+                  <span class="total-value">17 M</span>
+                  <span class="max-value">
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                    <span class="max-number">17.5%</span>
+                  </span>
+                </div>
+              </div>
+             
+            </div>
+            <div class="row">
+              <div class="col-1">
+                <img src="./assets/icons/xlm.svg" />
+              </div>
+              <div class="col-2">
+                <div class="header-row">
+                  <span class="total-title">Total Supply</span>
+                  <span class="max-title">Max Supply</span>
+                </div>
+                <div class="total-row total-width">
+                  <span class="total-value">17 M</span>
+                  <span class="max-value">
+                    <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                    <span class="max-number">17.5%</span>
+                  </span>
+                </div>
+              </div>
+             
+            </div>
+           </div>
+        </div>
+      </section>
+      <section>
+        <div class="row-two">
+          <div class="panel">
+            <span class="graph-name">USD Price Change</span>
+            <div class="price-table">
+              <div class="header-row row-border">
+                <div class="col-1">Period</div>
+                <div class="col-2">Change($)</div>
+                <div class="col-3">Change(%)</div>
+                <div class="col-4">
+                  High
+                  <span class="icon blue"> <i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+                </div>
+                <div class="col-5">
+                  Low
+                  <span class="icon red"> <i class="fa fa-arrow-down" aria-hidden="true"></i></span>
+                </div>
+              </div>
+              <div class="data-row">
+                <div class="col-1">5 May - 12 May</div>
+                <div class="col-2">
+                  <i class="fa fa-minus sign-icon" aria-hidden="true"></i>
+                  $ 40.45
+                </div>
+                <div class="col-3">
+                  <i class="fa fa-minus sign-icon" aria-hidden="true"></i>
+                  0.27 %
+                </div>
+                <div class="col-4">$0.21</div>
+                <div class="col-5">$0.4778</div>
+              </div>
+              <div class="data-row">
+                <div class="col-1">13 May - 18 May</div>
+                <div class="col-2">
+                  <i class="fa fa-plus sign-icon" aria-hidden="true"></i>
+                $ 42581
+              </div>
+                <div class="col-3">
+                  <i class="fa fa-plus sign-icon" aria-hidden="true"></i>
+                  1.27 %
+                </div>
+                <div class="col-4">
+                  $11.30
+                </div>
+                <div class="col-5">
+                  $0.7780
+                </div>
+              </div>
+              <div class="data-row">
+                <div class="col-1">19 May - 26 May</div>
+                <div class="col-2">
+                  <i class="fa fa-plus sign-icon" aria-hidden="true"></i>
+                  $1220.45
+                </div>
+                <div class="col-3">
+                  <i class="fa fa-plus sign-icon" aria-hidden="true"></i>
+                  2.07%
+                </div>
+                <div class="col-4">$0.41</div>
+                <div class="col-5">$0.7780</div>
+              </div>
+            </div>
+          </div>
+          <div class="panel2">
+            <span class="graph-name">Market Analytics</span>
+          </div>
+        </div>
+
+      </section>
+    </div>
+ 
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,396 @@
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root{
+    --color-primary: #191d2b;
+    --color-secondary: #27AE60;
+    --color-white: #FFFFFF;
+    --color-black: #000;
+    --color-grey0: #f8f8f8;
+    --color-grey-1: #dbe1e8;
+    --color-grey-2: #b2becd;
+    --color-grey-3: #6c7983;
+    --color-grey-4: #454e56;
+    --color-grey-5: #2a2e35;
+    --color-grey-6: #12181b;
+    --br-sm-2: 14px;
+    --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+    --box-shadow-2: 1px 1px 20px rgba(0,0,0,.1);
+    --box-shadow-3: 1px 1px 20px rgba(0,0,0,.3);
+
+}
+
+/*Changing all of the dark color values to light colors*/
+.light-mode{
+    --color-primary: #FFFFFF;
+    --color-secondary: #6dde9d;
+    --color-white: #454e56;
+    --color-black: #000;
+    --color-grey0: #f8f8f8;
+    --color-grey-1: #6c7983;
+    --color-grey-2: #6c7983;
+    --color-grey-3: #6c7983;
+    --color-grey-4: #454e56;
+    --color-grey-5: #f8f8f8;
+    --color-grey-6: #12181b;
+    --br-sm-2: 14px;
+    --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+    --box-shadow-2: 1px 1px 20px rgba(0,0,0,.1);
+    --box-shadow-3: 1px 3px 20px rgba(225, 183, 183, 0.3);
+
+}
+body{
+    background-color: var(--color-primary);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: var(--color-white);
+    transition: all 4s ease-in-out;
+    height: 100vh;
+
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    .title-row{
+        display: flex;
+        flex-flow: row;
+        flex: 1 0 auto;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .rectangle-row{
+        display: flex;
+        flex-flow:  row wrap;
+        flex:  0 1 auto;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 1.6rem 0px;
+        // margin-left: 20%;
+        .rectangle{
+            display: flex;
+            flex-flow: column;
+            height: 11rem;
+            width: 17.5rem;
+            margin: .625rem 4rem;
+            border-radius: 20px;        
+            background-color: var(--color-grey-6);
+            transition: all 4s ease-in-out;
+            font-size: 1rem;
+            padding: 0px .5rem;
+            .action-row{
+                display: flex;
+                flex-flow: row;
+                flex: 1 0 auto;
+                width: 97%;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                top: 0px;
+                button {
+                    background-color: rgba(255, 255, 255, 0.4);
+                    border: 1px solid white;
+                    height: 25px;
+                    width: 48px;
+                    color: #fff;
+                    border-radius: .3rem;
+                    &:hover{
+                        transform: translateY(-3px);
+                    }
+                }
+
+              
+            }
+            .name-row{
+                display: flex;
+                flex-flow: row;
+                flex: 1 0 auto;
+                width: 100%;
+            }
+
+            .price-row{
+                display: flex;
+                flex-flow: row;
+                flex: 1 0 auto;
+                width: 100%;
+                justify-content: space-between;
+            }
+         
+
+            .dot {
+                height: 3.75rem;
+                width: 3.75rem;
+                border-radius: 50%;
+                display: inline-block;  
+                margin-left: 0rem;  
+                background-color: rgba(255,255,255, .3); 
+                img{
+                    position: relative;
+                    top: 10px;
+                    width: 2.5rem;
+                }                         
+            }
+           .orange{
+                background-color: #FF9416;
+             
+            }
+            .purple{
+                background-color: #627EEA;
+            }
+            .blue{
+                background-color: #00B0CE;
+
+            }
+            .pink{
+                background-color: #BE62EA;
+
+            }
+            .coin-name{
+                font-weight: 600;
+            }
+            .coin-price{
+                font-weight: 200;
+            }
+            
+        }
+
+        .bitcoin{
+            background-color: rgb(46,141,255, .9);
+           //2A93FF
+
+        }
+        .ethereum{
+            background-color: rgb(112,77,151, .9)
+        }
+
+        .dextools{
+            background-color: rgb(92,166,173, .9);
+        }
+        .stellar{
+            background-color: rgb(236,131,120, .9);
+        }
+    }
+
+    .row-one{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 450px;
+        .panel{
+           position: relative;
+           height: 100%;
+           width: 100%;
+           margin-left: 12.5rem;
+           margin-top: 5px;
+           box-shadow: var(--box-shadow-3);
+           border-radius: 18px;
+           transition: all 4s ease-in-out;
+           background-color: var(--color-grey-6);
+           .graph-name{
+            position: absolute;
+            left: 1.2rem;
+            top: 1rem;
+            font-weight: 400;
+           }
+           #date-row, #date-row2 {
+            display: flex;
+            flex: 1 0 auto;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            border-top: 1px solid var(--color-grey-1);
+            font-size: .8rem;
+            margin-top: -6px;
+            transition: all 6s ease-in-out 1s;
+         
+           }
+
+
+        }
+        .panel2{
+            position: relative;
+           height: 100%;
+           width: 40%;
+           margin-left: 23.5rem;
+           margin-top: 5px;
+           box-shadow: var(--box-shadow-3);
+           border-radius: 18px;
+           transition: all 4s ease-in-out;
+           background-color: var(--color-grey-6);
+           .market-row{
+            display: flex;
+            flex: 0 1 auto;
+            width: 90%;
+            align-items: center;
+            justify-content: space-between;
+            margin: 5px 0px;
+            .table-name{
+                padding-left: 1.9rem;
+            }
+            .view-btn{
+                height: 30px;
+                width: 71px;
+                background-color: var(--color-grey-5);
+                color: white;
+                border: none;
+                border-radius: 3px;
+            }
+           }
+           .market-table{
+            display: flex;
+            flex-flow: column;
+            flex: 1 0 auto;
+            width: 100%;
+            margin-top: 1rem;
+            .row{
+                display: flex;
+                flex: 1 0 auto;
+                width: 100%;
+                padding: 10px 0px;
+                .col-1{
+                    width: 25%;
+                }
+                img{
+                    width: 2.75rem;
+                    margin-top: 4px;
+                }
+                .col-2{
+                width: 75%;
+                align-items: flex-start;
+                display: flex;
+                flex-flow: column;
+                .header-row {
+                    display: flex;
+                    flex-flow: row;
+                    justify-content: space-between;
+                    flex: 1 0 auto;
+                    width: 90%;
+                    font-size: .9rem;
+                  }
+
+                  .total-row{
+                    display: flex;
+                    flex-flow: row;
+                    justify-content: space-between;
+                    flex: 1 0 auto;
+                    width: 75%;
+                    margin-left: .1rem;
+                    .max-value{
+                        position: relative;
+                        left: 25px;
+                        color: #0F5749;
+                        .max-number{
+                            padding-left: 0.3rem;
+                        }
+                    }
+                  }
+
+                 
+                }
+                
+            }
+
+           }
+        }
+    }
+
+    .row-two{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 350px;
+        padding: 20px 0px;
+        .panel{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            margin-left: 12.5rem;
+            margin-top: 5px;
+            box-shadow: var(--box-shadow-3);
+            border-radius: 18px;
+            transition: all 4s ease-in-out;
+            background-color: var(--color-grey-6);
+            .price-table{
+                
+                .header-row{
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    width: 95%;
+                    max-width: 960px;
+                    margin: 3.5rem auto 1rem auto;
+                    padding: 5px 0px;
+                
+                }    
+                .row-border{
+                    border-radius: 10px;
+                    border: 1px solid rgba(255,255,255, .3);
+                }
+                    .blue{
+                        color: #0000ff;
+                    }
+                    .red{
+                        color: #ff0000;
+                    }
+                
+
+                .data-row{
+                    display: grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    width: 95%;
+                    max-width: 960px;
+                    margin: 1.5rem auto;
+                    padding: 5px 0px;
+                    border-radius: 10px;
+                    border: 1px solid rgba(255,255,255, 0);
+                    .col-4{
+                        position: relative;
+                        left: -12px;
+                    }
+                    .col-5{
+                        position: relative;
+                        left: -6px;
+                    }
+
+                    &:hover{
+                        background-color: var(--color-grey-4);
+                    }
+                   
+                }
+                .sign-icon{
+                    font-size: .65rem;
+                }
+               
+          }
+        }
+
+          .panel2{
+            position: relative;
+            height: 100%;
+            width: 40%;
+            margin-left: 23.5rem;
+            margin-top: 5px;
+            box-shadow: var(--box-shadow-3);
+            border-radius: 18px;
+            transition: all 4s ease-in-out;
+            background-color: var(--color-grey-6);
+          }
+          
+
+           .graph-name {
+            position: absolute;
+            left: 1.2rem;
+            top: 1rem;
+            font-weight: 400;
+        }
+        
+    }
+    
+}
+
+@import './graph.scss';
