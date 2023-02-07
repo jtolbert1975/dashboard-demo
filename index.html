@@ -114,10 +114,11 @@
         <div class="row-one">
           <div class="panel">
             <span class="graph-name">DAILY BURN</span>
-            <div id="svg-path">
+            <div class="daily-burn-container"><canvas id="daily-burn"></canvas></div>
+            <!-- <div id="svg-path">
               <div id="card"></div>
             </div>
-            <div id="date-row"></div>
+            <div id="date-row"></div> -->
           </div>
           <div class="panel2">
             <div class="market-row">
@@ -270,12 +271,97 @@
           </div>
           <div class="panel2">
             <span class="graph-name">Market Analytics</span>
+            <div class="graph-container"><canvas id="acquisitions"></canvas></div>
           </div>
         </div>
 
       </section>
     </div>
  
-    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js" ></script>
+    <script src="./chart-utils.min.js"></script>
+    <script>
+      (async function() {
+  const data = [
+    { year: 2010, count: 10 },
+    { year: 2011, count: 20 },
+    { year: 2012, count: 15 },
+    { year: 2013, count: 25 },
+    { year: 2014, count: 22 },
+    { year: 2015, count: 30 },
+    { year: 2016, count: 28 },
+  ];
+
+  const anchorId = document.getElementById('acquisitions');
+  console.log("anchordId: ", anchorId )
+
+  new Chart(
+    document.getElementById('acquisitions'),
+    {
+      type: 'bar',
+      options:{
+        animation: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            enabled: false
+          }
+        }        
+      },
+      data: {
+        labels: data.map(row => row.year),
+        datasets: [
+          {
+            label: 'Acquisitions by year',
+            data: data.map(row => row.count)
+          }
+        ]
+      }
+    }
+  );
+})();
+    </script>  
+    <script>
+(async function(){
+       // const Utils = ChartUtils.init();
+       // const labels = Utils.months({count: 7});
+const jLabels = setLabels();
+const data = {
+  labels: jLabels,
+  datasets: [{
+    label: '',
+    data: [65, 59, 80, 81, 56, 55, 40],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+}
+console.log("data: ", data)
+new Chart(document.getElementById('daily-burn'),
+  {
+    type: 'line',
+    data: data,
+  })
+})();
+
+       function setLabels(){
+        let labelGrp = [];
+        for(let i = 0; i < 7; i++){
+          // let d = new Date();
+          // console.log("D: ", d)
+          // let monthItem = d.setMonth(d.getMonth() + 1);
+          // labelGrp.push(monthItem);
+          var d = new Date();
+         // console.log(d.toLocaleDateString());
+          d.setMonth(d.getMonth() + i);
+        console.log(d.toLocaleDateString());
+        labelGrp.push(d.toLocaleDateString('defauly', {month: 'short'}))
+        }
+        console.log("labelGrp: ", labelGrp)
+        return labelGrp;
+       }
+    </script>
   </body>
 </html>

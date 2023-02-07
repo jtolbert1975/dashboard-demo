@@ -182,11 +182,13 @@ body{
     .row-one{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 16rem;
         min-height: 450px;
         .panel{
            position: relative;
            height: 100%;
-           width: 100%;
+           width: 91%;
+           max-width: 960px;
            margin-left: 12.5rem;
            margin-top: 5px;
            box-shadow: var(--box-shadow-3);
@@ -199,6 +201,12 @@ body{
             top: 1rem;
             font-weight: 400;
            }
+           .daily-burn-container{
+            max-width: 975px;
+        }
+        #daily-burn{
+            padding-left: 23px;
+        }
            #date-row, #date-row2 {
             display: flex;
             flex: 1 0 auto;
@@ -217,8 +225,8 @@ body{
         .panel2{
             position: relative;
            height: 100%;
-           width: 40%;
-           margin-left: 23.5rem;
+           width: 65%;
+           margin-left: .5em;
            margin-top: 5px;
            box-shadow: var(--box-shadow-3);
            border-radius: 18px;
@@ -316,6 +324,9 @@ body{
             border-radius: 18px;
             transition: all 4s ease-in-out;
             background-color: var(--color-grey-6);
+
+          
+           
             .price-table{
                 
                 .header-row{
@@ -368,6 +379,7 @@ body{
                
           }
         }
+      
 
           .panel2{
             position: relative;
@@ -379,15 +391,21 @@ body{
             border-radius: 18px;
             transition: all 4s ease-in-out;
             background-color: var(--color-grey-6);
+            .graph-name {
+                position: absolute;
+                left: 1.2rem;
+                top: 1rem;
+                font-weight: 400;
+            }
+            .graph-container{
+                width: 100%;
+                position: relative;
+                top: 81px;
+            }
           }
           
 
-           .graph-name {
-            position: absolute;
-            left: 1.2rem;
-            top: 1rem;
-            font-weight: 400;
-        }
+        
         
     }
     
