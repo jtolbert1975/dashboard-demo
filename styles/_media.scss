@@ -1,0 +1,228 @@
+@media screen and (max-width: 960px) {
+    .container{
+        .rectangle-row{
+            .rectangle{
+                height: 13rem;
+                width: 20.5rem;
+                min-width: 300px;
+            }
+        }
+        .row-one{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            min-height: 650px;
+            .panel{
+                width: 95vw;
+                max-width: 960px;
+                margin-left: .5rem;
+            }
+            .panel2{
+                width: 95vw;
+                max-width: 960px;
+                margin-left: .5rem;
+                margin-top: 2.5rem;
+
+            }
+        }
+
+        .row-two{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            min-height: 650px;
+            padding: 20px 0px;
+            .panel{
+                height: 40vh;
+                width: 95vw;
+                max-width: 960px;
+                margin-left: .5rem;
+                margin-top: 2.5rem;
+                font-size: .7rem;
+                .graph-name{
+                    font-size: 1rem;                    
+                    position: relative;
+                    top: 20px;
+                }
+               
+            }
+            .panel2{
+                height: 50vw;
+                width: 95vw;
+                
+                margin-left: .5rem;
+                margin-top: 2.5rem;
+                .graph-container{
+                    width: 85%;
+                    position: relative;
+                    top: 2.9rem;
+                    min-width: 300px;
+                    left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 525px) {
+    .container {
+        .row-two{
+            .panel{
+                font-size: .9rem;
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 961px) {
+    .container{
+        .rectangle-row{
+            .rectangle{
+                height: 11rem;
+                width: 20rem;
+                margin: 0.625rem 5rem;
+            }
+        }
+        .row-one {
+            display: flex;
+            flex-flow: row;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            .panel{
+                height: 38vw;
+                width: 35vw;
+                margin-left: 0rem;
+                .graph-name{
+                    position: absolute;
+                    left: 1.2rem;
+                    top: 1rem;
+                    font-weight: 400;
+                  }
+                  .daily-burn{
+                    margin-top: 1rem;
+                  }
+                }
+                .panel2{
+                    height: 38vw;
+                    width: 35vw;
+                    margin-left: 5rem;
+                    padding: .5rem 0;
+                    font-size: .9rem;
+                    max-width: 852px;
+                    .market-table{
+                        .row{
+                            .col-1{
+                                margin-left: 1rem;
+                            }
+                            .col-2{
+                                width: 34rem;
+                                margin-left: 2rem;
+                                .header-row{
+                                    width: 90%;
+                                    font-size: 0.9rem;
+                                }
+                                .total-row{
+                                    width: 80%;
+                                    margin-left: 0.1rem;
+                                  }
+                                }
+                            }
+                        }
+                        
+                    
+                }
+            }
+        
+
+            .row-two{
+                display: flex;
+                flex-flow: row;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                .panel{
+                    height: 38vw;
+                    width: 35vw;
+                    margin-left: 0rem;
+                    font-size: .7rem;
+                }
+                .panel2{
+                    height: 38vw;
+                    width: 35vw;
+                    margin-left: 5rem;
+                    max-height: 484px;
+                    max-width: 852px;
+                    .graph-container{
+                        max-width: 800px;
+                        max-height: 414px;
+                        height: 33vw;
+                    }
+                }
+            }
+        }
+        
+       
+    }
+
+@media screen and(min-width: 1024px) {
+    .container{
+        .row-two{
+            .panel{
+                .price-table{
+                    font-size: .9rem;
+                }
+            }
+        }
+    }
+}    
+
+@media screen and(min-width: 1440px) {
+    .container{
+        .rectangle-row{
+            .rectangle{
+                height: 10rem;
+                width: 15rem;
+                margin: 0.625rem 3rem;
+            }
+        }
+        .row-one {
+            justify-content: space-around;
+            .panel{
+                height: 28vw;
+                width: 44vw;
+                margin-left: 0rem;
+                max-height: 532px;
+            }
+            .panel2{
+                height: 28vw;
+                width: 39vw;
+                margin-left: 0rem;
+                padding: 0;
+                max-height: 532px;
+            }
+        }
+
+        .row-two{
+            justify-content: space-around;
+            .panel{
+                height: 28vw;
+                width: 44vw;
+                margin-left: 0rem;
+                max-height: 532px;
+                .graph-name{
+                    position: absolute;
+                    left: 1.2rem;
+                    top: 1rem;
+                    font-weight: 400;
+                    font-size: 1rem;
+                  }
+            }
+            .panel2{
+                height: 28vw;
+                width: 39vw;
+                margin-left: 0rem;
+                padding: 0;
+                max-height: 532px;
+            }
+        }
+    }
+}

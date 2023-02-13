@@ -55,6 +55,10 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
+  max-width: 1800px;
+}
+.container header {
+  width: 100vw;
 }
 .container .title-row {
   display: flex;
@@ -63,6 +67,7 @@ body {
   width: 100%;
   align-items: center;
   justify-content: center;
+  padding: 5px;
 }
 .container .rectangle-row {
   display: flex;
@@ -165,14 +170,13 @@ body {
 .container .row-one {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16rem;
   min-height: 450px;
 }
 .container .row-one .panel {
   position: relative;
   height: 100%;
-  width: 91%;
-  max-width: 960px;
+  width: 100%;
+  max-width: 852px;
   margin-left: 12.5rem;
   margin-top: 5px;
   box-shadow: var(--box-shadow-3);
@@ -188,6 +192,7 @@ body {
 }
 .container .row-one .panel .daily-burn-container {
   max-width: 975px;
+  max-height: 383px;
 }
 .container .row-one .panel #daily-burn {
   padding-left: 23px;
@@ -206,8 +211,8 @@ body {
 .container .row-one .panel2 {
   position: relative;
   height: 100%;
-  width: 65%;
-  margin-left: 0.5em;
+  width: 51%;
+  margin-left: 11.5rem;
   margin-top: 5px;
   box-shadow: var(--box-shadow-3);
   border-radius: 18px;
@@ -293,6 +298,7 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
+  max-width: 852px;
   margin-left: 12.5rem;
   margin-top: 5px;
   box-shadow: var(--box-shadow-3);
@@ -409,4 +415,192 @@ line {
   width: 150px;
   height: 50px;
   padding: 3px;
+}
+
+@media screen and (max-width: 960px) {
+  .container .rectangle-row .rectangle {
+    height: 13rem;
+    width: 20.5rem;
+    min-width: 300px;
+  }
+  .container .row-one {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 650px;
+  }
+  .container .row-one .panel {
+    width: 95vw;
+    max-width: 960px;
+    margin-left: 0.5rem;
+  }
+  .container .row-one .panel2 {
+    width: 95vw;
+    max-width: 960px;
+    margin-left: 0.5rem;
+    margin-top: 2.5rem;
+  }
+  .container .row-two {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    min-height: 650px;
+    padding: 20px 0px;
+  }
+  .container .row-two .panel {
+    height: 40vh;
+    width: 95vw;
+    max-width: 960px;
+    margin-left: 0.5rem;
+    margin-top: 2.5rem;
+    font-size: 0.7rem;
+  }
+  .container .row-two .panel .graph-name {
+    font-size: 1rem;
+    position: relative;
+    top: 20px;
+  }
+  .container .row-two .panel2 {
+    height: 50vw;
+    width: 95vw;
+    margin-left: 0.5rem;
+    margin-top: 2.5rem;
+  }
+  .container .row-two .panel2 .graph-container {
+    width: 85%;
+    position: relative;
+    top: 2.9rem;
+    min-width: 300px;
+    left: 1rem;
+  }
+}
+@media screen and (min-width: 525px) {
+  .container .row-two .panel {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 961px) {
+  .container .rectangle-row .rectangle {
+    height: 11rem;
+    width: 20rem;
+    margin: 0.625rem 5rem;
+  }
+  .container .row-one {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .row-one .panel {
+    height: 38vw;
+    width: 35vw;
+    margin-left: 0rem;
+  }
+  .container .row-one .panel .graph-name {
+    position: absolute;
+    left: 1.2rem;
+    top: 1rem;
+    font-weight: 400;
+  }
+  .container .row-one .panel .daily-burn {
+    margin-top: 1rem;
+  }
+  .container .row-one .panel2 {
+    height: 38vw;
+    width: 35vw;
+    margin-left: 5rem;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    max-width: 852px;
+  }
+  .container .row-one .panel2 .market-table .row .col-1 {
+    margin-left: 1rem;
+  }
+  .container .row-one .panel2 .market-table .row .col-2 {
+    width: 34rem;
+    margin-left: 2rem;
+  }
+  .container .row-one .panel2 .market-table .row .col-2 .header-row {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  .container .row-one .panel2 .market-table .row .col-2 .total-row {
+    width: 80%;
+    margin-left: 0.1rem;
+  }
+  .container .row-two {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .row-two .panel {
+    height: 38vw;
+    width: 35vw;
+    margin-left: 0rem;
+    font-size: 0.7rem;
+  }
+  .container .row-two .panel2 {
+    height: 38vw;
+    width: 35vw;
+    margin-left: 5rem;
+    max-height: 484px;
+    max-width: 852px;
+  }
+  .container .row-two .panel2 .graph-container {
+    max-width: 800px;
+    max-height: 414px;
+    height: 33vw;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container .row-two .panel .price-table {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container .rectangle-row .rectangle {
+    height: 10rem;
+    width: 15rem;
+    margin: 0.625rem 3rem;
+  }
+  .container .row-one {
+    justify-content: space-around;
+  }
+  .container .row-one .panel {
+    height: 28vw;
+    width: 44vw;
+    margin-left: 0rem;
+    max-height: 532px;
+  }
+  .container .row-one .panel2 {
+    height: 28vw;
+    width: 39vw;
+    margin-left: 0rem;
+    padding: 0;
+    max-height: 532px;
+  }
+  .container .row-two {
+    justify-content: space-around;
+  }
+  .container .row-two .panel {
+    height: 28vw;
+    width: 44vw;
+    margin-left: 0rem;
+    max-height: 532px;
+  }
+  .container .row-two .panel .graph-name {
+    position: absolute;
+    left: 1.2rem;
+    top: 1rem;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .container .row-two .panel2 {
+    height: 28vw;
+    width: 39vw;
+    margin-left: 0rem;
+    padding: 0;
+    max-height: 532px;
+  }
 }/*# sourceMappingURL=styles.css.map */
